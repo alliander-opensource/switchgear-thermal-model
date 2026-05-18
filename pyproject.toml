@@ -1,0 +1,138 @@
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+#
+# SPDX-License-Identifier: MPL-2.0
+
+[project]
+name = "switchgear-thermal-model"
+version = "1.3.0"
+description = "Thermal model for switchgears."
+authors = [{ name = "Contributors to the Switchgear Thermal Model project" }]
+requires-python = ">=3.12,<4"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = [
+    "numpy>=2.2.5,<3",
+    "pandas>=2.0.0, <4.0.0",
+    "pydantic>=2.12.1,<3",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2.0,<5",
+    "ruff>=0.11.9,<0.16.0",
+    "mypy>=2.0.0,<3",
+    "pytest-cov>=7.1.0,<8",
+    "codespell>=2.4.1,<3",
+    "pytest>=9.0.3,<10",
+    "ipykernel>=7.0.1,<8",
+]
+docs = [
+    "mkdocs>=1.6.1,<2",
+    "mkdocstrings-python>=2.0.0,<3",
+    "mkdocs-exclude==1.0.0",
+    "mkdocs-llmstxt>=0.5.0,<0.6",
+    "mkdocs-material>=9.7.6,<10",
+    "mkdocs-mermaid2-plugin>=1.2.1,<2",
+    "mkdocs-jupyter>=0.26.0,<0.27",
+    "matplotlib>=3.10.3,<4",
+]
+
+[tool.poetry.group.dev]
+optional=true
+
+[tool.poetry.group.docs]
+optional=true
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+output-format = "github"
+line-length = 120
+show-fixes = true
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "migrations",
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflake
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+    # pydocstyle
+    "D",
+]
+ignore = [
+    # Missing docstring in public module
+    "D100",
+    # Missing docstring in public package
+    "D104",
+    #  `one-blank-line-before-class` (D203) and `no-blank-line-before-class` (D211) are incompatible. Ignoring `one-blank-line-before-class`.
+    "D203",
+    # `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.
+    "D213",
+]
+
+[tool.pytest.ini_options]
+markers = ["integrationtest"]
+addopts = [
+  "--cov",
+  "--cov-branch",
+  "--cov-report=xml",
+  "--cov-report=term-missing"  # Coverage report incl missing lines in terminal
+]
+
+[tool.coverage.run]
+relative_files = true
+omit = [
+    "tests/*"
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+# Allow longer line length in conftest where many 1-line dictinaries are specified
+"conftest.py" = ["E501"]
