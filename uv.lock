@@ -2303,7 +2303,7 @@ wheels = [
 
 [[package]]
 name = "switchgear-thermal-model"
-version = "1.2.0"
+version = "0.0.1"
 source = { editable = "." }
 dependencies = [
     { name = "numpy" },
@@ -2347,7 +2347,7 @@ dev = [
     { name = "pre-commit", specifier = ">=4.2.0,<5" },
     { name = "pytest", specifier = ">=9.0.3,<10" },
     { name = "pytest-cov", specifier = ">=7.1.0,<8" },
-    { name = "ruff", specifier = ">=0.11.9,<0.12" },
+    { name = "ruff", specifier = ">=0.11.9,<0.16.0" },
 ]
 docs = [
     { name = "matplotlib", specifier = ">=3.10.3,<4" },
