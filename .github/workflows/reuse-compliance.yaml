@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+#
+# SPDX-License-Identifier: MPL-2.0
+name: REUSE Compliance Check
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-reuse-compliance
+  cancel-in-progress: true
+
+jobs:
+  reuse-compliance-check:
+    runs-on: ubuntu-24.04
+    steps:
+    - name: checkout
+      uses: actions/checkout@v6
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@676e2d560c9a403aa252096d99fcab3e1132b0f5 #v6.0.0
