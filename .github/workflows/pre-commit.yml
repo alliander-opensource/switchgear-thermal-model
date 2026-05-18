@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Contributors to the Transformer Thermal Model project
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
 #
 # SPDX-License-Identifier: MPL-2.0
 
@@ -35,8 +35,7 @@ jobs:
         env:
           POETRY_INSTALLER_ONLY_BINARY: ":all:"
         run: |
-#          pip install pre-commit --only-binary :all:
-          poetry install --with dev
+          pip install pre-commit --only-binary :all:
           pre-commit install
       - name: Run pre-commit
         if: ${{ hashFiles('.pre-commit-config.yaml') != '' }}
