@@ -42,11 +42,6 @@ docs = [
     "matplotlib>=3.10.3,<4",
 ]
 
-[tool.poetry.group.dev]
-optional=true
-
-[tool.poetry.group.docs]
-optional=true
 
 
 [build-system]
