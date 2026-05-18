@@ -1,0 +1,95 @@
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+#
+# SPDX-License-Identifier: MPL-2.0
+
+site_name: Switchgear Thermal Model
+site_description: Simulate thermal behavior of switchgear.
+site_author: Contributors to the Switchgear Thermal Model project
+site_url: https://github.com/Alliander/switchgear-thermal-model
+
+# https://www.mkdocs.org/user-guide/configuration/#validation
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+nav:
+  - Welcome to Switchgear Thermal Model: index.md
+  - Get Started:
+    - Installation and overview: get_started/about.md
+    - Model input: get_started/model_input.md
+  - API Documentation: 
+    - Architecture: api_reference/architecture.md
+    - Model: api_reference/switchgear_temp.md
+    - Switchgear: api_reference/switchgear.md
+    - Input profiles: api_reference/input_profile.md
+  - Examples:
+    - Quick start: examples/quick_start.ipynb
+  - Theoretical Documentation:
+    - Model Description: theoretical_documentation/model_equations.md
+    - Determining switchgear parameters: theoretical_documentation/determining_switchgear_parameters.md
+
+plugins:
+- llmstxt:
+    enabled: !ENV [CI, false]
+    full_output: llms-full.txt
+    markdown_description: |-
+      Switchgear Thermal Model is a Python package for simulating the thermal 
+      behavior of switchgear.
+    sections:
+      API documentation:
+        - api_reference/*.md
+- search
+- mermaid2
+- exclude:
+    glob:
+    - theme/announce.html
+    - plugins/*
+    - __pycache__/*
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [.]
+        options:
+          show_root_full_path: false
+          members_order: source
+          separate_signature: true
+          filters: ["!^_"]
+          docstring_options:
+            ignore_init_summary: true
+          show_docstring_examples: true
+          merge_init_into_class: true
+          show_signature_annotations: true
+          signature_crossrefs: true
+        import:
+          - url: https://docs.python.org/3/objects.inv
+            domains: [py, std]
+- mkdocs-jupyter:
+    include_source: true
