@@ -17,6 +17,7 @@ components.
 ## 1. Transformer Thermal Model
 
 This project includes
+
 - a **simplified and modified version** of an input model derived from the
 [Transformer Thermal Model](https://github.com/alliander-opensource/transformer-thermal-model).
 - a copy of an image explaining the different levels of contribution, which is based
