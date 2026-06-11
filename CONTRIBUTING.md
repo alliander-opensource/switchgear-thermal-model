@@ -36,8 +36,31 @@ email <switchgear-thermal-model@alliander.com> to responsibly disclose it.
 
 ## Develop new features
 
-You can help to improve the project with developing new features. Please read
-the following for details on how to contribute:
+You can help to improve the project with developing new features. If you are curious and would
+like to contribute, but do not know what to contribute, you can refer to our
+[issue list](https://github.com/alliander-opensource/switchgear-thermal-model/issues). If you are new to this project,
+you might consider starting with the
+[issues labeled as `good-first-issue`](https://github.com/alliander-opensource/switchgear-thermal-model/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22).
+
+Please read the following for details on how to contribute:
+
+### Regarding AI and LLM's
+
+Regarding contributions made
+by AI we feel inspired by the contributing rules from
+[FastAPI (tiangolo.com)](https://tiangolo.com/open-source/contributing/#automated-code-and-ai):
+
+> If the human effort put in a PR, e.g. writing LLM prompts, is less than the effort we would need to put to review it,
+> please don't submit the PR.
+>
+> Think of it this way: we can already write LLM prompts or run automated tools ourselves, and that would be faster
+> than reviewing external PRs.
+>
+> _Copied on 3rd of June, 2026 from <https://tiangolo.com/open-source/contributing/#automated-code-and-ai>_
+
+and the
+[Python Developer's Guide](https://devguide.python.org/getting-started/generative-ai/#generative-ai).
+Please consider those requirements when contributing to our project.
 
 ### Set up
 
