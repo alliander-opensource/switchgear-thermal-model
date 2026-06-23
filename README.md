@@ -65,13 +65,6 @@ result = switchgear_temp(input_profile, switchgear)
 - **Creating switchgear models**: Create a switchgear model based on specified thermal parameters.
 - **Temperature modeling**: Calculate conductor temperature according to IEC 62271‑306.
 
-## Documentation
-
-- [Getting Started](https://alliander-opensource.github.io/switchgear-thermal-model/get_started/about/)
-- [API Reference](https://alliander-opensource.github.io/switchgear-thermal-model/api_reference/switchgear_temp/)
-- [Examples](https://alliander-opensource.github.io/switchgear-thermal-model/examples/quick_start/)
-- [Technical Documentation](https://alliander-opensource.github.io/switchgear-thermal-model/theoretical_documentation/model_equations/)
-
 ## License
 
 This project is licensed under the Mozilla Public License, version 2.0 - see
