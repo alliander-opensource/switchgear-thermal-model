@@ -59,3 +59,36 @@ switchgear = Switchgear(
 # run the model
 result = switchgear_temp(input_profile, switchgear)
 ```
+
+## Features
+
+- **Creating switchgear models**: Create a switchgear model based on specified thermal parameters.
+- **Temperature modeling**: Calculate conductor temperature according to IEC 62271‑306.
+
+## License
+
+This project is licensed under the Mozilla Public License, version 2.0 - see
+[LICENSE](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/LICENSE) for details.
+
+## Licenses third-party libraries
+
+This project includes third-party libraries,
+which are licensed under their own respective Open-Source licenses.
+SPDX-License-Identifier headers are used to show which license is applicable.
+
+An overview of these third-party libraries and their licenses is outlined in [THIRD_PARTY_NOTICES](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/THIRD_PARTY_NOTICES.md)
+
+## Contributing
+
+Please read
+[CODE_OF_CONDUCT](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/CODE_OF_CONDUCT.md),
+[CONTRIBUTING](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/CONTRIBUTING.md)
+and
+[PROJECT GOVERNANCE](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/GOVERNANCE.md)
+for details on the process
+for submitting pull requests to us.
+
+## Contact
+
+Please read [SUPPORT](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/SUPPORT.md) for how to
+get in touch with the Switchgear Thermal Model project.
