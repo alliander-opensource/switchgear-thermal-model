@@ -192,3 +192,6 @@ pyrightconfig.json
 coverage-reports/*
 **/__pycache__/*
 .vscode
+
+# Direnv
+.envrc
