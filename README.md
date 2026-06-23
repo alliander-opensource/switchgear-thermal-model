@@ -62,7 +62,7 @@ result = switchgear_temp(input_profile, switchgear)
 
 ## Features
 
-- **Creating switchgear models**: Create as switchgear model based on specified thermal parameters.
+- **Creating switchgear models**: Create a switchgear model based on specified thermal parameters.
 - **Temperature modeling**: Calculate conductor temperature according to IEC 62271‑306.
 
 ## Documentation
@@ -83,7 +83,7 @@ This project includes third-party libraries,
 which are licensed under their own respective Open-Source licenses.
 SPDX-License-Identifier headers are used to show which license is applicable.
 
-An overview of these third-party libraries and their licences is outlined in [THIRD_PARTY_NOTICES](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/THIRD_PARTY_NOTICES.md)
+An overview of these third-party libraries and their licenses is outlined in [THIRD_PARTY_NOTICES](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/THIRD_PARTY_NOTICES.md)
 
 ## Contributing
 
@@ -98,4 +98,4 @@ for submitting pull requests to us.
 ## Contact
 
 Please read [SUPPORT](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/SUPPORT.md) for how to
-get in touch with the Transformer Thermal Model project.
+get in touch with the Switchgear Thermal Model project.

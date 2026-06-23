@@ -44,7 +44,7 @@ you might consider starting with the
 
 Please read the following for details on how to contribute:
 
-### Regarding AI and LLM's
+### Regarding AI and LLMs
 
 Regarding contributions made
 by AI we feel inspired by the contributing rules from

@@ -8,7 +8,6 @@ message: "If you are using Switchgear Thermal Model in your research work, pleas
 
 title: "alliander-opensource/switchgear-thermal-model"
 url: "https://github.com/alliander-opensource/switchgear-thermal-model"
-doi: ""
 license: "MPL-2.0"
 authors:
   - family-names: "Kok"
