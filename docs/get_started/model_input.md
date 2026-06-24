@@ -18,7 +18,7 @@ temperature of the switchgear under realistic operating conditions.
 ## Relevant thermal specifications
 
 To define a switchgear object, four thermal parameters must be specified. These
-parameters describe both the steady-state and dynamic thermal behaviour of the
+parameters describe both the steady-state and dynamic thermal behavior of the
 switchgear.
 
 ### 1. Nominal load
