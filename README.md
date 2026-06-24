@@ -6,7 +6,6 @@ SPDX-License-Identifier: MPL-2.0
 
 # Switchgear thermal model
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=alert_status&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=code_smells&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=sqale_rating&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=coverage&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
