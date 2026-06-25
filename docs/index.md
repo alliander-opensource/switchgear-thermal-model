@@ -6,7 +6,7 @@ SPDX-License-Identifier: MPL-2.0
 
 # Welcome to Switchgear Thermal Model
 
-`switchgear-thermal-model` is a library for modeling the conductor temperature
+Switchgear Thermal Model is a library for modeling the conductor temperature
 of switchgear based on thermal specifications, load profiles and an ambient
 temperature conditions. The model is based on calculation principles described
 in IEC 62271-306. The results of the model should be considered indicative:

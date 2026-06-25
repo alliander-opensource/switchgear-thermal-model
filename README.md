@@ -6,11 +6,6 @@ SPDX-License-Identifier: MPL-2.0
 
 # Switchgear thermal model
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=alert_status&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=code_smells&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=sqale_rating&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Alliander_switchgear-thermal-model&metric=coverage&token=530fe96da4abf015e0ecfe4dc2a52aab09ea9029)](https://sonarcloud.io/summary/new_code?id=Alliander_switchgear-thermal-model)
-
 thermal model which can simulate the temperature of the switchgear, based on
 the switchgear specifications, ambient temperature and load profiles.
 
@@ -64,6 +59,17 @@ result = switchgear_temp(input_profile, switchgear)
 
 - **Creating switchgear models**: Create a switchgear model based on specified thermal parameters.
 - **Temperature modeling**: Calculate conductor temperature according to IEC 62271‑306.
+
+## Documentation
+
+- [Getting Started](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/docs/get_started/about.md)
+- [Examples](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/docs/examples/quick_start.ipynb)
+- [Technical Documentation](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/docs/theoretical_documentation/model_equations.md)
+
+The documentation for the Switchgear Thermal Model can be read more easily when viewing a self-hosted version as 
+outlined in [CONTRIBUTING.md](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/CONTRIBUTING.md)
+
+As of writing, we are working on a centrally hosted documentation site.
 
 ## License
 
