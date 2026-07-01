@@ -10,6 +10,7 @@ permissions:
 
 on:
   push:
+  workflow_dispatch:
     inputs:
       python-version:
         required: false
@@ -21,15 +22,17 @@ jobs:
   pytest:
     runs-on:
       group: managed
+    env:
+      PYTHON_VERSION: ${{ github.event.inputs['python-version'] || '3.12' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
-      - name: Install python${{ inputs.python-version }}
+      - name: Install python${{ env.PYTHON_VERSION }}
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
-          python-version:  ${{ inputs.python-version }}
+          python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
-        run: pipx install --python python${{ inputs.python-version }} poetry
+        run: pipx install --python python${{ env.PYTHON_VERSION }} poetry
       - name: Install the library using poetry
         env:
           POETRY_INSTALLER_ONLY_BINARY: ":all:"
