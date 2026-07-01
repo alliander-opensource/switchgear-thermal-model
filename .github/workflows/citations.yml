@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+#
+# SPDX-License-Identifier: MPL-2.0
+
+name: Validate citation
+
+permissions:
+  contents: read
+
+on:
+  # run pipeline on push event of main branch, or when CITATIONS path has changed
+  push:
+    branches:
+      - main
+    paths:
+      - CITATION.cff
+      - .github/workflows/citations.yml
+  pull_request:
+    paths:
+      - CITATION.cff
+      - .github/workflows/citations.yml
+  # run pipeline from another workflow
+  workflow_call:
+  # run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}-citations
+  cancel-in-progress: true
+
+jobs:
+  validate-citations:
+    runs-on: 
+      group: managed
+    steps:
+    - name: checkout
+      uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+    - name: Install R
+      run: |
+        sudo apt-get update && sudo apt-get install -y r-base
+    - name: Validate CITATION.cff
+      uses: dieghernan/cff-validator@54c8e737314b948f25c0e5524a9d8ae3f39b207b   #v5.0.1

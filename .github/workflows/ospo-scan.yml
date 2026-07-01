@@ -1,0 +1,36 @@
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+# SPDX-License-Identifier: MPL-2.0
+
+# Trigger reusable workflow.
+
+name: OSPO Code Scan - for other non-public repo
+run-name: 'Scan "${{ inputs.repository }}" with git ref "${{ inputs.ref }}"'
+
+permissions:
+  contents: read
+  packages: read
+
+on:
+  push:
+    branches:
+      - feat/workflows  # change to your branch name
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'GitHub repository path (myorg/myrepo)'
+        required: false
+        default: 'Alliander/switchgear-thermal-model'
+        type: string
+      ref:
+        description: 'Optional git reference or branch to scan main branch'
+        default: 'feat/workflows'
+        type: string
+
+jobs:
+  scan:
+    uses: Alliander/ospo-code-scanner/.github/workflows/scan-reusable.yml@40572c531fd2373f9b09bc0516d3a276ea1b25f7
+    secrets:
+      GH_REPOSITORY_READ_PERMISSIONS: ${{ secrets.GH_REPOSITORY_READ_PERMISSIONS }}
+    with:
+      repository: ${{ inputs.repository }}
+      ref: ${{ inputs.ref }}
