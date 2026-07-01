@@ -37,8 +37,7 @@ jobs:
           POETRY_INSTALLER_ONLY_BINARY: ":all:"
         run: |
           pip install pre-commit --only-binary :all:
-          pre-commit install
       - name: Run pre-commit
         if: ${{ hashFiles('.pre-commit-config.yaml') != '' }}
         shell: bash
-        run: pre-commit run -a
+        run: poetry run pre-commit run -a
