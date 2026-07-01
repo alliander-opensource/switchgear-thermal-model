@@ -145,14 +145,13 @@ making in this PR), because ... .
 #### Working on the documentation
 
 The Switchgear Thermal Model uses [MkDocs](https://www.mkdocs.org/) for documentation.
-At this moment, the documentation can be viewed locally. 
 To install the dependencies with poetry, run:
 
 ```bash
 poetry install --with docs
 ```
 
-Then you can run the local version of our documentation page with:
+Then you can run a local version of our documentation page with:
 
 ```bash
 mkdocs serve
