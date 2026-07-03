@@ -1,0 +1,43 @@
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+#
+# SPDX-License-Identifier: MPL-2.0
+
+name: |
+  (CI) Pre-commit
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push:
+    inputs:
+      python-version:
+        required: false
+        default: '3.12'
+        type: string
+        description: 'Python version used.'
+
+jobs:
+  pre-commit:
+    runs-on:
+      group: managed
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        if: ${{ hashFiles('.pre-commit-config.yaml') != '' }}
+        with:
+          python-version:  ${{ inputs.python-version }}
+      - name: Install Poetry
+        if: ${{ hashFiles('.pre-commit-config.yaml') != '' }}
+        run: pipx install --python python${{ inputs.python-version }} poetry
+      - name: Install pre-commit
+        if: ${{ hashFiles('.pre-commit-config.yaml') != '' }}
+        env:
+          POETRY_INSTALLER_ONLY_BINARY: ":all:"
+        run: |
+          pip install pre-commit --only-binary :all:
+      - name: Run pre-commit
+        if: ${{ hashFiles('.pre-commit-config.yaml') != '' }}
+        shell: bash
+        run: poetry run pre-commit run -a

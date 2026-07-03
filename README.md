@@ -66,7 +66,7 @@ result = switchgear_temp(input_profile, switchgear)
 - [Examples](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/docs/examples/quick_start.ipynb)
 - [Technical Documentation](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/docs/theoretical_documentation/model_equations.md)
 
-The documentation for the Switchgear Thermal Model can be read more easily when viewing a self-hosted version as 
+The documentation for the Switchgear Thermal Model can be read more easily when viewing a self-hosted version as
 outlined in [CONTRIBUTING.md](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/CONTRIBUTING.md)
 
 As of writing, we are working on a centrally hosted documentation site.
