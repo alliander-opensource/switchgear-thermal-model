@@ -6,6 +6,14 @@ SPDX-License-Identifier: MPL-2.0
 
 # Switchgear thermal model
 
+[![License: MPL2.0](https://img.shields.io/badge/License-MPL2.0-informational.svg)](https://github.com/alliander-opensource/switchgear-thermal-model/blob/main/LICENSE)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alliander-opensource_switchgear-thermal-model&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=alliander-opensource_switchgear-thermal-model)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=alliander-opensource_switchgear-thermal-model&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=alliander-opensource_switchgear-thermal-model)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=alliander-opensource_switchgear-thermal-model&metric=coverage)](https://sonarcloud.io/summary/new_code?id=alliander-opensource_switchgear-thermal-model)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=alliander-opensource_switchgear-thermal-model&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=alliander-opensource_switchgear-thermal-model)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alliander-opensource_switchgear-thermal-model&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=alliander-opensource_switchgear-thermal-model)
+
 thermal model which can simulate the temperature of the switchgear, based on
 the switchgear specifications, ambient temperature and load profiles.
 
