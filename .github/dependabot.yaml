@@ -10,11 +10,11 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip" # `pip` also enables Poetry
+  - package-ecosystem: "uv"
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
       day: "sunday"
       time: "04:00"
     cooldown:
-      default-days: 3
+      default-days: 7
