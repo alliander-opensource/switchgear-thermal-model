@@ -73,14 +73,14 @@ Please consider those requirements when contributing to our project.
     - for contributions to the documentation page, make sure you install
       the correct dependencies using `poetry install --with docs`, too.
 5. Activate the poetry shell: `poetry shell`.
-6. Set up pre-commit hooks: `pre-commit install`. Every time you commit, this
+5. Set up pre-commit hooks: `prek install`. Every time you commit, this
    will run hooks to ensure your code is properly formatted.
 7. Work on your contribution.
 8. [Make a PR with your fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork).
 
 ### During development
 
-To check if `pre-commit` was properly installed, run `pre-commit run -a`. You
+To check if `prek` was properly installed, run `prek run -a`. You
 would find the terminal output something like:
 
 ```bash
