@@ -31,29 +31,27 @@ jobs:
         uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-      - name: Install Poetry
-        run: pipx install --python python${{ env.PYTHON_VERSION }} poetry
-      - name: Install the library using poetry
-        env:
-          POETRY_INSTALLER_ONLY_BINARY: ":all:"
+      - name: Install uv
+        run: pipx install --python python${{ env.PYTHON_VERSION }} uv==0.11.31
+      - name: Install the library using uv
         shell: bash
-        run: poetry install --with dev
+        run: uv sync --group dev --no-install-project --no-build --frozen
       - name: Unit tests
         if: ${{ hashFiles('tests/') != '' }}
         shell: bash
-        run: poetry run pytest
+        run: PYTHONPATH=. uv run --no-sync --no-build pytest
       - name: Upload coverage.xml as artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a #v7.0.1
         if: ${{ hashFiles('coverage.xml') != '' }}
         with:
           name: coverage.xml
           path: ./coverage.xml
-      # - name: SonarQube Scan
-      #   # dependabot cannot access these secrets (see
-      #   # https://github.com/dependabot/dependabot-core/issues/3253#issuecomment-852541544
-      #   # for more info. We need this SonarQube scan for the coverage report,
-      #   # so we still want it here for our own pushes.
-      #   if: github.actor != 'dependabot[bot]'
-      #   uses: SonarSource/sonarqube-scan-action@299e4b793aaa83bf2aba7c9c14bedbb485688ec4 #v7.1.0
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#      - name: SonarQube Scan
+#         # dependabot cannot access these secrets (see
+#         # https://github.com/dependabot/dependabot-core/issues/3253#issuecomment-852541544
+#         # for more info. We need this SonarQube scan for the coverage report,
+#         # so we still want it here for our own pushes.
+#        if: github.actor != 'dependabot[bot]'
+#        uses: SonarSource/sonarqube-scan-action@299e4b793aaa83bf2aba7c9c14bedbb485688ec4 #v7.1.0
+#        env:
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
