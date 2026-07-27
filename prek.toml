@@ -5,7 +5,7 @@
 
 [[repos]]
 repo = "https://github.com/astral-sh/ruff-pre-commit"
-rev = "v0.15.12"
+rev = "2700fd5671c633760d912769c041bfcde2b9a01b" # v0.15.22
 hooks = [
   {
     id = "ruff",
@@ -16,7 +16,7 @@ hooks = [
 
 [[repos]]
 repo = "https://github.com/pre-commit/mirrors-mypy"
-rev = "v1.20.2"
+rev = "41e691678310dfd3833f7ab4e180ddb014310356" # v2.3.0
 hooks = [
   {
     id = "mypy",
@@ -29,7 +29,7 @@ hooks = [
 
 [[repos]]
 repo = "https://github.com/codespell-project/codespell"
-rev = "v2.4.2"
+rev = "57b21406f092110c18776e39b0bda50d37c945c8" # v2.4.3
 hooks = [
   {
     id = "codespell",
@@ -39,7 +39,7 @@ hooks = [
 
 [[repos]]
 repo = "https://github.com/igorshubovych/markdownlint-cli"
-rev = "v0.48.0"
+rev = "5b5dddc4fb0f83c3ea1fc5616fa63e115dce83e0" # v0.49.1
 hooks = [
   {
     id = "markdownlint",
