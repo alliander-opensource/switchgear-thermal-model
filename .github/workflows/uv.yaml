@@ -14,7 +14,7 @@ on:
 jobs:
   generate_uv:
     runs-on:
-      group: managed
+      group: managed-linux
     permissions:
       contents: read # for actions/checkout
     steps:
