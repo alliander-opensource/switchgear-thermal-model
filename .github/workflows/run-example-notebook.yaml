@@ -33,7 +33,7 @@ jobs:
         run: pipx install --python python${{ env.python-version }} uv==0.11.31
       - name: Install the library using uv
         shell: bash
-        run: uv sync --group docs --no-install-project --no-build --frozen
+        run: uv sync --group docs --no-install-project --frozen
       - name: Run example notebooks
         env:
           PYTHONPATH: ${{ github.workspace }} # Set PYTHONPATH to the root of the repository to ensure that the library can be imported in the notebooks
