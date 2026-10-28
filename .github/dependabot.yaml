@@ -1,20 +1,38 @@
-# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project <core@alliander.com>
+# SPDX-FileCopyrightText: Contributors to the Switchgear Thermal Model project
+#
 # SPDX-License-Identifier: MPL-2.0
-
-# Trigger reusable workflow.
-
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please refer to the documentation for all configuration options:
-# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
 updates:
-  - package-ecosystem: "uv"
-    directory: "/" # Location of package manifests
+  - package-ecosystem: github-actions
+    directory: "/"
     schedule:
-      interval: "weekly"
-      day: "sunday"
-      time: "04:00"
+      interval: weekly
+    groups:
+      actions-minor-and-patch:
+        update-types:
+          - minor
+          - patch
     cooldown:
       default-days: 7
+    commit-message:
+      prefix: "ci"
+    labels:
+      - dependencies
+      - github-actions
+
+  - package-ecosystem: uv
+    directory: "/"
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "deps"
+    cooldown:
+      default-days: 7
+    groups:
+      dependencies:
+        patterns:
+          - "*"
+    labels:
+      - dependencies
+      - python
