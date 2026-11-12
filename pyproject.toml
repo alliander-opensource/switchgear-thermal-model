@@ -4,7 +4,7 @@
 
 [project]
 name = "switchgear-thermal-model"
-version = "0.0.1"
+version = "0.0.2"
 description = "Thermal model for switchgears."
 authors = [{ name = "Contributors to the Switchgear Thermal Model project" }]
 requires-python = ">=3.12,<4"
